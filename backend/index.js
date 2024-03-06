@@ -66,5 +66,6 @@ app.get("/", (req, res) => {
   console.log("GET /");
   res.send("HELLO FROM BACKEND");
 });
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+})
