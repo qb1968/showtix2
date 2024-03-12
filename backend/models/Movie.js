@@ -12,7 +12,7 @@ const movieSchema = new mongoose.Schema({
     type: String,
   },
   originalTitle: {
-    required: true,
+    required: false,
     type: String,
   },
   description: {
@@ -28,20 +28,20 @@ const movieSchema = new mongoose.Schema({
     default: false,
   },
   runtime: {
-    required: true,
+    required: false,
     type: Number,
   },
   release: {
     productionCountry: {
-      required: true,
+      required: false,
       type: String,
     },
     productionYear: {
-      required: true,
+      required: false,
       type: Number,
     },
     ageRestriction: {
-      required: true,
+      required: false,
       type: Number,
     },
   },
@@ -53,7 +53,7 @@ const movieSchema = new mongoose.Schema({
   ],
   genres: [
     {
-      required: true,
+      required: false,
       type: String,
     },
   ],
@@ -61,13 +61,13 @@ const movieSchema = new mongoose.Schema({
     crew: {
       director: {
         name: {
-          required: true,
+          required: false,
           type: String,
         },
       },
       screenwriter: {
         name: {
-          required: true,
+          required: false,
           type: String,
         },
       },
@@ -75,14 +75,14 @@ const movieSchema = new mongoose.Schema({
     cast: [
       {
         name: {
-          required: true,
+          required: false,
           type: String,
         },
         roleName: {
           type: String,
         },
         img: {
-          required: true,
+          required: false,
           type: String,
         },
       },

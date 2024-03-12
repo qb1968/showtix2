@@ -42,12 +42,12 @@ const sendTicket = async (ticket) => {
     const movieHTML = `<h3>${movie.title}</h2>`;
     const cinemaHTML = `<h3>${cinema.title}</h2>`;
     const datetimeHTML = `<h2>${datetime.toLocaleString("de-de", {
-      timeZone: process.env.TIME_ZONE || "Europe/Berlin",
+      timeZone: process.env.TIME_ZONE || "United States",
     })}</h2>`;
     let seatsHTML = "";
     seats.map(
       (seat) =>
-        (seatsHTML += `<li>Reihe: ${seat.row} / Platz: ${seat.col} [${seat.type.title}]</li>`)
+        (seatsHTML += `<li>Row: ${seat.row} / Seat: ${seat.col} [${seat.type.title}]</li>`)
     );
 
     const mail = {
