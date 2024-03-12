@@ -1,0 +1,42 @@
+.seatMap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.3em;
+    min-width: 20em;
+    /* background-color: red; */
+}
+
+.screen {
+    /* width: 35em; */
+    width: 100%;
+    max-width: 20em;
+    height: 8em;
+    margin-left:5rem;
+    /* background-color: gray; */
+ 
+    
+    background-color:black;  
+}
+
+.screenText {
+    width: 100%;
+    max-width: 30em;
+   text-align:center;
+    margin: 0;
+    margin-bottom: 0.2em;
+    width: 100%;
+    padding-right: 1em;
+    font-style: italic;
+}
+
+.legend {
+    width: 100%;
+    border-top: 1px solid grey;
+    margin-top: 2em;
+    padding-top: 0.5em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+    color: black
+}
