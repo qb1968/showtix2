@@ -22,7 +22,7 @@ const Register = (props) => {
   return (
     <Container>
       <div className={styles.register}>
-        <h1>Registrieren</h1>
+        <h1>Register</h1>
         <RegisterForm
           error={error}
           onSubmit={submitHandler}

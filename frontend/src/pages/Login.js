@@ -44,7 +44,7 @@ const Login = (props) => {
         />
         <hr />
         <Link to="/register">
-          <Button variant="secondary">Registrieren</Button>
+          <Button variant="secondary">Register</Button>
         </Link>
       </div>
     </Container>
