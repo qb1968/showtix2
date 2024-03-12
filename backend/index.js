@@ -10,16 +10,15 @@ const mongoose = require("mongoose");
 const mongoString = process.env.MONGODB_URI;
 const cookieParser = require("cookie-parser");
 
-mongoose.connect(mongoString);
-const database = mongoose.connection;
-
-database.on("error", (error) => {
-  console.log(error);
-});
-
-database.once("connected", () => {
-  console.log("Database Connected");
-});
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGODB_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -66,5 +65,5 @@ app.get("/", (req, res) => {
   console.log("GET /");
   res.send("HELLO FROM BACKEND");
 });
-database().then(() => {
+connectDB().then(() => {
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))});
