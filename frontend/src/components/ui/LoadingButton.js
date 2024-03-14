@@ -5,7 +5,7 @@ const LoadingButton = (props) => {
   const { isLoading, children } = props;
   const loadingMsg = (
     <div className="d-flex align-items-center justify-content-center gap-1">
-      <span>Bitte warten</span>
+      <span>Wait</span>
       <Spinner
         as="span"
         animation="border"

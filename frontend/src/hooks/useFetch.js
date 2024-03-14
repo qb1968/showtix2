@@ -22,8 +22,8 @@ const useFetch = () => {
       if (res.status === 401 && data?.tokenExpired) {
         removeUser();
         createMessage({
-          header: "Sitzung abgelaufen",
-          text: "Bitte erneut einloggen",
+          header: "Session timed out",
+          text: "Log in again",
           variant: "danger",
         });
       }
@@ -31,9 +31,9 @@ const useFetch = () => {
     } catch (err) {
       rtn = {
         status: res?.status || 400,
-        message: res?.status !== 200 && "Fehler bei der Serveranfrage",
+        message: res?.status !== 200 && "Server request error",
       };
-      res?.status !== 200 && setErrorMsg("Fehler bei der Serveranfrage");
+      res?.status !== 200 && setErrorMsg("Server request error");
     }
     setIsFetching(false);
     return rtn;

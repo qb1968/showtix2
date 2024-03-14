@@ -26,7 +26,7 @@ const useAuth = () => {
       if (res.status === 200) {
         removeUser();
         createMessage({
-          text: "Erfolgreich ausgeloggt",
+          text: "Logged Out",
           variant: "success",
         });
       }
@@ -42,7 +42,7 @@ const useAuth = () => {
     if (res.status === 200) {
       saveUser(res.user);
       createMessage({
-        text: "Erfolgreich registriert",
+        text: "Successfully Registered",
         variant: "success",
       });
     }

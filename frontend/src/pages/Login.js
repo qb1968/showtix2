@@ -19,7 +19,7 @@ const Login = (props) => {
     await login(user.username, user.password).then((success) => {
       setIsFetching(false);
       if (!success) {
-        setError("Login fehlgeschlagen");
+        setError("Login failed");
         return;
       }
 
