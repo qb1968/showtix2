@@ -239,7 +239,7 @@ exports.update = async (req, res) => {
       .cookie("auth_token", token, {
         httpOnly: true,
         sameSite: process.env.NODE_ENV === "production" ? "None" : "lax",
-        secure: process.env.NODE_ENV === "production" ? "None" : "lax",
+        secure: process.env.NODE_ENV === "production" ,
       })
       .status(200)
       .json({ user: userInfo });
