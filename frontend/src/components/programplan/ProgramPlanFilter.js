@@ -25,7 +25,7 @@ const ProgramPlanFilter = ({
   return (
     <div className={styles.container}>
       <Form.Select
-        aria-label="Zeit aussuchen"
+        aria-label="Choose Time"
         className={styles.select}
         defaultValue={timeOptions?.default}
         onChange={(ev) => onSelectTime(ev.target.value)}

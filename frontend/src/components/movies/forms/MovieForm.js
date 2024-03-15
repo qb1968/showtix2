@@ -227,7 +227,7 @@ const MovieForm = (props) => {
           type="submit"
           isLoading={props.isLoading}
         >
-          {isNew ? "Create" : "Aktualisieren"}
+          {isNew ? "Create" : "Update"}
         </LoadingButton>
       </Form>
     </Card>

@@ -23,7 +23,7 @@ const TicketList = (props) => {
     ticketItems && ticketItems.length > 0 ? (
       ticketItems
     ) : (
-      <h2 className="text-muted text-center">Keine Tickets vorhanden</h2>
+      <h2 className="text-muted text-center">No tickets available</h2>
     );
 
   return (

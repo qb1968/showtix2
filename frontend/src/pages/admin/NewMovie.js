@@ -19,7 +19,7 @@ const NewMovie = (props) => {
         behavior: "smooth",
       });
       createMessage({
-        text: "Film wurde erfolgreich erstellt",
+        text: "Show was created",
         variant: "success",
       });
     }

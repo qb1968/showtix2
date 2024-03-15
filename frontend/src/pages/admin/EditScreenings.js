@@ -124,8 +124,8 @@ const EditScreenings = (props) => {
       />
       <DeleteModal
         show={showDeleteModal}
-        title="Filmvorführung"
-        text="Wollen Sie wirklich die Filmvorführung löschen?"
+        title="Show Editing"
+        text="Do you want to delete show?"
         onClose={() => setShowDeleteModal(false)}
         onDelete={deleteScreeningHandler}
         isLoading={isFetching}

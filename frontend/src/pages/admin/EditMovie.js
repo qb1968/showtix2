@@ -39,7 +39,7 @@ const EditMovie = (props) => {
         behavior: "smooth",
       });
       createMessage({
-        text: "Film wurde erfolgreich aktualisiert",
+        text: "Show has been updated",
         variant: "success",
       });
     }
@@ -49,7 +49,7 @@ const EditMovie = (props) => {
   return (
     <Container>
       <Content className={styles.content}>
-        <h2>Film Bearbeiten</h2>
+        <h2>Show Editing</h2>
         {isFetchingPage && <LoadingSpinner />}
         {!isFetchingPage && (
           <MovieConfig

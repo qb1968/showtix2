@@ -53,11 +53,11 @@ const Cart = (props) => {
     await login(user.username, user.password).then((success) => {
       setIsFetching(false);
       if (!success) {
-        setError("Login fehlgeschlagen");
+        setError("Login failed");
         return;
       } else {
         createMessage({
-          text: "Erfolgreich eingeloggt",
+          text: "Welcome",
           variant: "success",
         });
       }
@@ -83,19 +83,19 @@ const Cart = (props) => {
   const guestForm = (
     <Form className="pt-3">
       <Form.Group className="mb-3" controlId="guestFirstName">
-        <Form.Label>Vorname</Form.Label>
+        <Form.Label>First Name</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Vorname eingeben..."
+          placeholder="Enter first name..."
           onChange={(ev) => setGuestFirstName(ev.target.value)}
           value={guestFirstName}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="guestLastName">
-        <Form.Label>Nachname</Form.Label>
+        <Form.Label>Last Name</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Nachname eingeben..."
+          placeholder="enter last name..."
           onChange={(ev) => setGuestLastName(ev.target.value)}
           value={guestLastName}
         />
@@ -104,7 +104,7 @@ const Cart = (props) => {
         <Form.Label>E-Mail</Form.Label>
         <Form.Control
           type="email"
-          placeholder="E-Mail eingeben..."
+          placeholder="enter e-mail..."
           onChange={(ev) => setGuestMail(ev.target.value)}
           value={guestMail}
         />
@@ -137,13 +137,13 @@ const Cart = (props) => {
                         {cart.screening.scheduledScreening.cinema.title}
                       </h3>
                       <h4 className="mt-1">
-                        {new Date(cart.screening.date).toLocaleString("de-de", {
+                        {new Date(cart.screening.date).toLocaleString("en-us", {
                           weekday: "long",
                         })}
                       </h4>
                       <h4>
                         {new Date(cart.screening.date).toLocaleDateString()},{" "}
-                        {cart.screening.scheduledScreening.time} Uhr
+                        {cart.screening.scheduledScreening.time} EST
                       </h4>
                       <h4 className="mt-1">
                         Tickets:{" "}
@@ -206,7 +206,7 @@ const Cart = (props) => {
                 </>
               ) : (
                 <h3 className="text-muted text-center mt-3 mb-3">
-                  Warenkorb ist leer
+                  Cart is Empty
                 </h3>
               )}
             </>

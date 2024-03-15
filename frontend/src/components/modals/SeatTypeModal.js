@@ -32,14 +32,14 @@ const SeatTypeModal = (props) => {
     <Modal show={props.show} onHide={props.onClose}>
       <Modal.Header closeButton>
         <Modal.Title>
-          Sitzplatz-Typ {props.isNew ? "erstellen" : "bearbeiten"}
+          Seat Type {props.isNew ? "create" : "edit"}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {props.error && <p className="text-danger">{props.error}</p>}
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="title">
-            <Form.Label>Bezeichnung</Form.Label>
+            <Form.Label>Designation</Form.Label>
             <Form.Control
               type="text"
               value={title}
@@ -49,7 +49,7 @@ const SeatTypeModal = (props) => {
           </Form.Group>
           <div className="d-flex gap-3">
             <Form.Group className="mb-3 flex-fill" controlId="price">
-              <Form.Label>Preis</Form.Label>
+              <Form.Label>Price</Form.Label>
               <Form.Control
                 type="number"
                 min={0}
@@ -59,7 +59,7 @@ const SeatTypeModal = (props) => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="price">
-              <Form.Label>Farbe</Form.Label>
+              <Form.Label>Color</Form.Label>
               <Form.Control
                 type="color"
                 value={colorHEX}
@@ -74,7 +74,7 @@ const SeatTypeModal = (props) => {
               variant="secondary"
               onClick={props.onClose}
             >
-              Abbrechen
+              Cancel
             </Button>
             <LoadingButton
               type="sumit"
@@ -82,7 +82,7 @@ const SeatTypeModal = (props) => {
               variant="success"
               isLoading={props.isLoading}
             >
-              {props.isNew ? "Erstellen" : "Aktualisieren"}
+              {props.isNew ? "Create" : "To update"}
             </LoadingButton>
           </div>
         </Form>

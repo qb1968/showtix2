@@ -131,11 +131,11 @@ const CinemaConfig = (props) => {
     <>
       <Form>
         <Form.Group className="mb-3" controlId="title">
-          <Form.Label>Titel</Form.Label>
+          <Form.Label>Title</Form.Label>
           <div className="d-flex justify-content-center align-items-start gap-3">
             <Form.Control
               type="text"
-              placeholder="Titel eingeben..."
+              placeholder="Enter title..."
               onChange={(ev) => setTitle(ev.target.value)}
               value={title}
             />
@@ -145,7 +145,7 @@ const CinemaConfig = (props) => {
               onClick={onSubmit}
               isLoading={props.isLoading}
             >
-              {props.isNew ? "Erstellen" : "Aktualisieren"}
+              {props.isNew ? "Create" : "To update"}
             </LoadingButton>
           </div>
           {errorMsg}
@@ -154,7 +154,7 @@ const CinemaConfig = (props) => {
       <hr />
       <div className="d-flex flex-row justify-content-center gap-3">
         <Form.Group className="mb-3" controlId="rowCnt">
-          <Form.Label>Reihen</Form.Label>
+          <Form.Label>Rows</Form.Label>
           <Form.Control
             type="number"
             value={rowCnt}
@@ -163,7 +163,7 @@ const CinemaConfig = (props) => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="colCnt">
-          <Form.Label>Sitzplätze</Form.Label>
+          <Form.Label>Seating</Form.Label>
           <Form.Control
             type="number"
             value={colCnt}
@@ -175,9 +175,9 @@ const CinemaConfig = (props) => {
       <hr />
       <div className="d-flex w-100 justify-content-center">
         <Form.Group className={styles.typeSelector} controlId="colCnt">
-          <Form.Label>Sitzplatz Typ</Form.Label>
+          <Form.Label>Seat Type</Form.Label>
           <Form.Select
-            aria-label="Sitzplatztyp"
+            aria-label="Seat Type"
             onChange={changeSeatTypeHandler}
           >
             {seatTypeOptions}

@@ -53,7 +53,7 @@ const TicketValidation = (props) => {
     <>
       <Container>
         <Content style={{ minHeight: "70vh" }}>
-          <h1>Ticket Validierung</h1>
+          <h1>Ticket Validation</h1>
           <hr />
           <QrReader
             onResult={onScan.bind(showValidationModal)}

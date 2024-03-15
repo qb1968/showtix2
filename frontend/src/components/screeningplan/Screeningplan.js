@@ -87,31 +87,31 @@ const Screeningplan = (props) => {
         <thead>
           <tr className={styles.weekdays}>
             <th>
-              Mo
+              Monday
               {!props.editMode && `, ${getNextDate(1).toLocaleDateString()}`}
             </th>
             <th>
-              Di
+              Tuesday
               {!props.editMode && `, ${getNextDate(2).toLocaleDateString()}`}
             </th>
             <th>
-              Mi
+              Wednesday
               {!props.editMode && `, ${getNextDate(3).toLocaleDateString()}`}
             </th>
             <th>
-              Do
+              Thursday
               {!props.editMode && `, ${getNextDate(4).toLocaleDateString()}`}
             </th>
             <th>
-              Fr
+              Friday
               {!props.editMode && `, ${getNextDate(5).toLocaleDateString()}`}
             </th>
             <th>
-              Sa
+              Saturday
               {!props.editMode && `, ${getNextDate(6).toLocaleDateString()}`}
             </th>
             <th>
-              So
+              Sunday
               {!props.editMode && `, ${getNextDate(7).toLocaleDateString()}`}
               
             </th>

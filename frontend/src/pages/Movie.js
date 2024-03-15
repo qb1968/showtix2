@@ -78,16 +78,13 @@ const Movie = (props) => {
                 className={styles.poster}
               />
               <h1>{movie.title}</h1>
-              
+
               {movie.subtitle && (
                 <h3 className="text-muted">{movie.subtitle}</h3>
               )}
               <p className={styles.description}>{movie.description}</p>
               <div className="mt-5 d-flex gap-5">
-                
-                <div>
-                  
-                </div>
+                <div></div>
               </div>
               <hr style={{ clear: "both", border: "none" }} />
             </section>
@@ -101,7 +98,7 @@ const Movie = (props) => {
                   </div>
                 ) : (
                   <h3 className="text-muted text-center mt-4">
-                    Keine Vorführungen im Programmplan vorhanden
+                    There are no performances in the schedule
                   </h3>
                 )}
 
@@ -119,10 +116,7 @@ const Movie = (props) => {
                     </div>
                   </>
                 )}
-
-               
               </div>
-             
             </section>
           </>
         )}

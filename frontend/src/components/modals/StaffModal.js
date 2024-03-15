@@ -6,7 +6,7 @@ const StaffModal = ({ show, onClose, isLoading, error, isNew, onSubmit }) => {
     <Modal show={show} onHide={onClose}>
       <Modal.Header closeButton>
         <Modal.Title>
-          Mitarbeiter {isNew ? "anlegen" : "bearbeiten"}
+         Employees {isNew ? "invest" : "edit"}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

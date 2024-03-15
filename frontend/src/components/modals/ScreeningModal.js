@@ -44,23 +44,23 @@ const ScreeningModal = ({
   return (
     <Modal show={show} onHide={onClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Neue Filmvorführung</Modal.Title>
+        <Modal.Title>New Show</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form.Group className="mb-3" controlId="movie">
-          <Form.Label>Film</Form.Label>
+          <Form.Label>Show</Form.Label>
           <FormSelect ref={selectedMovie} required={true}>
             {movieOptions}
           </FormSelect>
         </Form.Group>
         <Form.Group className="mb-3" controlId="cinema">
-          <Form.Label>Kinosaal</Form.Label>
+          <Form.Label>Theater</Form.Label>
           <FormSelect ref={selectedCinema} required={true}>
             {cinemaOptions}
           </FormSelect>
         </Form.Group>
         <Form.Group className="mb-3" controlId="time">
-          <Form.Label>Zeit</Form.Label>
+          <Form.Label>Time</Form.Label>
           <Form.Control
             type="time"
             onChange={(ev) => setSelectedTime(ev.target.value)}
@@ -69,15 +69,15 @@ const ScreeningModal = ({
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="weekday">
-          <Form.Label>Wochentag</Form.Label>
+          <Form.Label>Date</Form.Label>
           <FormSelect ref={selectedWeekday} required={true}>
-            <option value="Monday">Montag</option>
-            <option value="Tuesday">Dienstag</option>
-            <option value="Wednesday">Mittwoch</option>
-            <option value="Thursday">Donnerstag</option>
-            <option value="Friday">Freitag</option>
-            <option value="Saturday">Samstag</option>
-            <option value="Sunday">Sonntag</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
           </FormSelect>
         </Form.Group>
       </Modal.Body>
@@ -85,7 +85,7 @@ const ScreeningModal = ({
         {errorMsg}
         <div className="d-flex gap-3 flex-fill">
           <Button variant="secondary" className="flex-fill" onClick={onClose}>
-            Abbrechen
+            Cancel
           </Button>
           <LoadingButton
             variant="success"
@@ -93,7 +93,7 @@ const ScreeningModal = ({
             onClick={addScreening}
             isLoading={isLoading}
           >
-            Hinzufügen
+            Add
           </LoadingButton>
         </div>
       </Modal.Footer>

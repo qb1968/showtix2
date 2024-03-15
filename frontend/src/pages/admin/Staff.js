@@ -46,7 +46,7 @@ const Staff = (props) => {
       ]);
       setShowDeleteModal(false);
       createMessage({
-        text: "Mitarbeiter wurde erfolgreich gelöscht",
+        text: "Employee deleted",
         variant: "success",
       });
     });
@@ -58,7 +58,7 @@ const Staff = (props) => {
       setStaff((prevStaff) => [...prevStaff, res.data]);
       setShowStaffModal(false);
       createMessage({
-        text: "Mitarbeiter wurde erfolgreich erstellt",
+        text: "Employee created",
         variant: "success",
       });
     });
@@ -69,9 +69,9 @@ const Staff = (props) => {
       <Container>
         <Content className={styles.content} style={{ minHeight: "70vh" }}>
           <div className={styles.header}>
-            <h1>Mitarbeiter verwalten</h1>
+            <h1>Manage Employees</h1>
             <hr />
-            <MainButton onClick={onAdd}>Neuen Mitarbeiter erstellen</MainButton>
+            <MainButton onClick={onAdd}>Create New Employee</MainButton>
           </div>
           {isFetchingPage && <LoadingSpinner />}
           {!isFetchingPage && <StaffList data={staff} onDelete={onDelete} />}
@@ -87,8 +87,8 @@ const Staff = (props) => {
       />
       <DeleteModal
         show={showDeleteModal}
-        title="Mitarbeiter löschen"
-        text="Wollen Sie wirklich den Mitarbeiter löschen?"
+        title="Delete Employees"
+        text="Do you want to delete employee?"
         onClose={() => setShowDeleteModal(false)}
         onDelete={deleteHandler}
         error={errorMsg}

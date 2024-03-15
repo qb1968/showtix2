@@ -202,21 +202,19 @@ exports.update = async (req, res) => {
     const user = await findUser({ username: userCookie.username });
     console.log("FOUND USER", user);
     if (!user)
-      return res.status(400).json({ message: "Benutzer nicht gefunden" });
+      return res.status(400).json({ message: "user not found" });
 
     console.log("update.username", update.username);
     const test = await findUser({ username: update.username });
     console.log("test", test);
     if (user.username !== update.username && test)
-      return res
-        .status(400)
-        .json({ message: "Benutzername ist bereits vergeben" });
+      return res.status(400).json({ message: "Username is already taken" });
 
     if (
       user.email !== update.email &&
       (await findUser({ email: update.email }))
     )
-      return res.status(400).json({ message: "Email ist bereits vergeben" });
+      return res.status(400).json({ message: "Email is already taken" });
 
     user.firstName = update.firstName;
     user.lastName = update.lastName;

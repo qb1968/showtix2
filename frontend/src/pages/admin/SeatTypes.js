@@ -56,7 +56,7 @@ const SeatTypes = (props) => {
         setTypes((prevTypes) => [...prevTypes, res.data]);
         setShowSeatTypeModal(false);
         createMessage({
-          text: "Sitzplatztyp wurde erfolgreich erstellt",
+          text: "Seat Type was created",
           variant: "success",
         });
       } else {
@@ -76,7 +76,7 @@ const SeatTypes = (props) => {
         });
         setShowSeatTypeModal(false);
         createMessage({
-          text: "Sitzplatztyp wurde erfolgreich aktualisiert",
+          text: "Seat type was updated",
           variant: "success",
         });
       }
@@ -93,7 +93,7 @@ const SeatTypes = (props) => {
       if (res.status !== 200) return;
       setShowDeleteModal(false);
       createMessage({
-        text: "Sitzplatztyp wurde erfolgreich gelöscht",
+        text: "Seat type was deleted",
         variant: "success",
       });
       setTypes((prevTypes) => [
@@ -144,7 +144,7 @@ const SeatTypes = (props) => {
       <DeleteModal
         show={showDeleteModal}
         title={selectedSeatType?.title}
-        text="Wollen Sie wirklich den Sitzplatz-Typ löschen?"
+        text="Do you want to delete seat type?"
         onClose={() => setShowDeleteModal(false)}
         onDelete={deleteHandler}
         isLoading={isFetching}

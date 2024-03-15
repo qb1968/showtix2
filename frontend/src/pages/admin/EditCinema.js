@@ -35,7 +35,7 @@ const EditCinema = (props) => {
       .then((res) => {
         if (res.status === 200)
           createMessage({
-            text: "Kinosaal wurde erfolgreich aktualisiert",
+            text: "Theater has been updated",
             variant: "success",
           });
       });
@@ -44,7 +44,7 @@ const EditCinema = (props) => {
   return (
     <Container>
       <Content style={{ minHeight: "70vh" }}>
-        <h1 className="mb-4">Kinosaal bearbeiten</h1>
+        <h1 className="mb-4">Edit Theater</h1>
         {isFetchingPage && <LoadingSpinner />}
         {!isFetchingPage && (
           <CinemaConfig

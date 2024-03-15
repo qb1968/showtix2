@@ -45,7 +45,7 @@ const Movies = (props) => {
       if (res.status !== 200) return;
       setShowDeleteModal(false);
       createMessage({
-        text: "Film wurde erfolgreich gelöscht ",
+        text: "Show was deleted ",
         variant: "success",
       });
       setMovies((prev) => {
@@ -74,7 +74,7 @@ const Movies = (props) => {
               )}
               {movies.length <= 0 && (
                 <h2 className="text-muted text-center">
-                  Keine Filme vorhanden
+                 No Shows Available
                 </h2>
               )}
             </>
@@ -84,7 +84,7 @@ const Movies = (props) => {
       <DeleteModal
         show={showDeleteModal}
         title={deleteMovie?.title}
-        text="Wollen Sie wirklich den Film löschen?"
+        text="Do you want to delete the show?"
         onClose={() => setShowDeleteModal(false)}
         onDelete={deleteMovieHandler}
         isLoading={isFetching}

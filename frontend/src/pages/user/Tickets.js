@@ -42,7 +42,7 @@ const Tickets = (props) => {
     <Container>
       <Content className={styles.content} style={{ minHeight: "70vh" }}>
         <div className={styles.header}>
-          <h1 className="mb-4">Meine Tickets</h1>
+          <h1 className="mb-4">My Tickets</h1>
           <hr />
         </div>
         {isFetching && <LoadingSpinner />}

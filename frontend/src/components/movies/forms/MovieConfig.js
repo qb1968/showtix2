@@ -44,8 +44,8 @@ const MovieConfig = (props) => {
       {/* <label htmlFor="searchMovie">Film in Datenbank suchen</label> */}
       <SearchInput
         className="mt-2"
-        placeholder="Suche"
-        aria-label="Suche"
+        placeholder="Search"
+        aria-label="Search"
         onChange={(e) => setSearchInput(e.target.value)}
         onKeyDown={onSearchInput}
         onClick={searchMovieHandler}

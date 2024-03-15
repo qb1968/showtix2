@@ -26,7 +26,7 @@ router.post("/", authAdmin, async (req, res) => {
 
     if (foundType)
       return res.status(400).json({
-        message: "Es existiert bereits ein Sitzplatztyp mit dieser Bezeichnung",
+        message: "A seat type with this name already exists",
       });
 
     const seatType = new SeatType(body);
@@ -51,7 +51,7 @@ router.put("/:id", authAdmin, async (req, res) => {
 
     if (foundType && foundType.id !== id)
       return res.status(400).json({
-        message: "Es existiert bereits ein Sitzplatztyp mit dieser Bezeichnung",
+        message: "A seat type with this name already exists",
       });
 
     const updatedType = await SeatType.findByIdAndUpdate(id, body);

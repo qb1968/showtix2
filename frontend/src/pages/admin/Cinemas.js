@@ -48,7 +48,7 @@ const Cinemas = (props) => {
         return cinemas;
       });
       createMessage({
-        text: "Kinosaal wurde erfolgreich gelöscht",
+        text: "Theater was deleted",
         variant: "success",
       });
     });
@@ -91,7 +91,7 @@ const Cinemas = (props) => {
       <DeleteModal
         show={showDeleteModal}
         title={deleteCinema?.title}
-        text="Wollen Sie wirklich den Kinosaal löschen?"
+        text="Do you want to delete theater?"
         onClose={() => setShowDeleteModal(false)}
         onDelete={deleteCinemaHandler}
         isLoading={isFetching}

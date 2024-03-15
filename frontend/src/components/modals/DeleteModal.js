@@ -21,7 +21,7 @@ const DeleteModal = (props) => {
             variant="secondary"
             onClick={props.onClose}
           >
-            Abbrechen
+           Cancel
           </Button>
           <LoadingButton
             className="flex-fill"
@@ -29,7 +29,7 @@ const DeleteModal = (props) => {
             onClick={props.onDelete}
             isLoading={props.isLoading}
           >
-            Löschen
+            Delete
           </LoadingButton>
         </div>
       </Modal.Footer>

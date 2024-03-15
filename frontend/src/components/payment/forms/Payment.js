@@ -41,9 +41,9 @@ const Payment = (props) => {
       {!isFetching && error && (
         <>
           <h2 className="text-danger">
-            Fehler bei der Verbindung zum Zahlungsdienstleister
+            Error connecting to the payment service provider
           </h2>
-          <h4 className="text-danger">Bitte Vorgang wiederholen</h4>
+          <h4 className="text-danger">Repeat process</h4>
         </>
       )}
       {stripePromise && clientSecret && (
