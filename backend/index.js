@@ -22,7 +22,7 @@ const connectDB = async () => {
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-
+app.use(cookieParser());
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
@@ -42,7 +42,7 @@ app.use(
     parameterLimit: 50000,
   })
 );
-app.use(cookieParser());
+
 
 // only use the raw bodyParser for webhooks
 app.use((req, res, next) => {
