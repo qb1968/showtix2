@@ -214,7 +214,7 @@ exports.update = async (req, res) => {
       user.email !== update.email &&
       (await findUser({ email: update.email }))
     )
-      return res.status(400).json({ message: "Email is already taken" });
+      return res.status(400).json({ message: "Email ist bereits vergeben" });
 
     user.firstName = update.firstName;
     user.lastName = update.lastName;
@@ -239,7 +239,7 @@ exports.update = async (req, res) => {
       .cookie("auth_token", token, {
         httpOnly: true,
         sameSite: process.env.NODE_ENV === "production" ? "None" : "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: process.env.NODE_ENV === "production" ? "None" : "lax",
       })
       .status(200)
       .json({ user: userInfo });
