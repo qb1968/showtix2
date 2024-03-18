@@ -37,12 +37,12 @@ function App() {
     <React.Fragment>
       <ScrollToTop />
       <div className="appContainer">
-        <NavBar />
+        {/* <NavBar /> */}
         <FlashController />
         <Routes>
           {/* Public */}
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          {/* <Route path="/home" element={<Home />} />
           <Route path="/movies/:id" element={<Movie />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
@@ -51,17 +51,17 @@ function App() {
           <Route
             path="/ticketshop/payment/completion"
             element={<Completion />}
-          />
+          /> */}
 
           {/* User */}
-          <Route element={<ProtectedRoute hasPermission={isLoggedIn} />}>
+          {/* <Route element={<ProtectedRoute hasPermission={isLoggedIn} />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/user/account" element={<Account />} />
             <Route path="/user/tickets" element={<Tickets />} />
-          </Route>
+          </Route> */}
 
           {/* Staff */}
-          <Route
+          {/* <Route
             element={
               <ProtectedRoute
                 hasPermission={
@@ -72,18 +72,18 @@ function App() {
             }
           >
             <Route path="/tickets/validation" element={<TicketValidation />} />
-          </Route>
+          </Route> */}
 
           {/* Admin */}
-          <Route
+          {/* <Route
             path="/admin"
             element={
               <ProtectedRoute
                 hasPermission={isLoggedIn && user.role === ROLES.ADMIN}
               />
             }
-          >
-            <Route path="movies" element={<Movies />} />
+          > */}
+            {/* <Route path="movies" element={<Movies />} />
             <Route path="movies/new" element={<NewMovie />} />
             <Route path="movies/:id/edit" element={<EditMovie />} />
             <Route path="cinemas" element={<Cinemas />} />
@@ -91,11 +91,11 @@ function App() {
             <Route path="cinemas/:id/edit" element={<EditCinema />} />
             <Route path="screenings/edit" element={<EditScreenings />} />
             <Route path="seattypes" element={<SeatTypes />} />
-            <Route path="staff" element={<Staff />} />
-          </Route>
+            <Route path="staff" element={<Staff />} /> */}
+          {/* </Route> */}
 
           {/* Fallback */}
-          <Route path="*" element={<Home />} />
+          {/* <Route path="*" element={<Home />} /> */}
         </Routes>
         <Footer />
       </div>
